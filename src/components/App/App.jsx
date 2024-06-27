@@ -4,6 +4,8 @@ import "modern-normalize";
 import Feedback from '../Feedback/Feedback';
 import Options from '../Options/Options';
 import Notification from '../Notification/Notification';
+import Description from '../Description/Description';
+/*import LoginForm from '../LoginForm/LoginForm';*/
 function App() {
   const [feedback, setFeedback] = useState(() => {
     const savedFeedback = localStorage.getItem("saved-feedbacks");
@@ -33,8 +35,7 @@ function App() {
 
   return (
     <>
-      <h1>Sip Happens Café</h1>
-      <p>Please leave your feedback about our service by selecting one of the options below.</p>
+      <Description/>
       <Options
         update={updateFeedback}
         totalFeedback={totalFeedback}
@@ -45,6 +46,7 @@ function App() {
           feedback={feedback}
           totalFeedback={totalFeedback} />
       }
+      
     </>
       
       )
