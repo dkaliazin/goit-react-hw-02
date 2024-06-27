@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import "modern-normalize";
-import Feedback from './Feedback';
-import Options from './Options';
-import Notification from './Notification';
+import Feedback from '../Feedback/Feedback';
+import Options from '../Options/Options';
+import Notification from '../Notification/Notification';
 function App() {
   const [feedback, setFeedback] = useState(() => {
     const savedFeedback = localStorage.getItem("saved-feedbacks");
